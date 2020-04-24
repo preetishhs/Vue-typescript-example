@@ -1,0 +1,43 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%;
+  /*    16px (browser default) * 62.5 = 10px   
+          now we can use rem units at all places 
+          1rem = 10px;
+          1.6rem = 16px;
+    */
+  @include respond(small-desktop) {
+    font-size: 56.25%;
+  }
+  @include respond(tab) {
+    font-size: 52%;
+  }
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
+}
