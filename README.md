@@ -1,7 +1,5 @@
 # ts-vue-sample
 
-Live demo link https://vuetsblog.netlify.com/
-
 Mock server used https://jsonplaceholder.typicode.com/
 
 **This is a simple Blog (with CRUD Operation) to showcase the usage of:**
