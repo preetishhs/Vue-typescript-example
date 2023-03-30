@@ -10,6 +10,7 @@
         <el-card :body-style="{ padding: '0px' }" class="article">
           <img
             src="https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg"
+            :alt="post.title"
             class="image"
           />
           <div class="title">
@@ -20,10 +21,12 @@
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
 const posts = namespace('posts')
+
 @Component
 export default class Home extends Vue {
   mounted() {
@@ -36,6 +39,7 @@ export default class Home extends Vue {
   public getAllPosts!: () => void
 }
 </script>
+
 <style lang="scss" scoped>
 a {
   text-decoration: none;

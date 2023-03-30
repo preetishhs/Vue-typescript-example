@@ -5,6 +5,7 @@
       <div class="banner-container">
         <img
           src="https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg"
+          :alt="article.title"
           class="banner"
         />
       </div>

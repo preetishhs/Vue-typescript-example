@@ -47,7 +47,7 @@ class Posts extends VuexModule {
   @Action
   public async getPost(id: number): Promise<Post | boolean> {
     if (this.list.length !== 0) {
-      const fetched = await this.list.filter(item => {
+      const fetched = this.list.filter(item => {
         return item.id === id
       })
 
@@ -76,11 +76,10 @@ class Posts extends VuexModule {
 
   @Mutation
   public edit(data: Post): void {
-    this.list.map(item => {
-      if (item.id === data.id) {
-        item = data
-      }
-    })
+    const index = this.list.findIndex(item => item.id === data.id);
+    if (index === -1) {
+      this.list = [...this.list, data];
+    }
   }
   @Action
   public async editPost(data: Post): Promise<boolean> {
