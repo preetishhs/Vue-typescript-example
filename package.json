@@ -2,16 +2,19 @@
   "name": "ts-vue-sample",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://raouf25.github.io/Vue-typescript-example/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.0",
+    "gh-pages": "^5.0.0",
     "sass": "^1.60.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
