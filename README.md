@@ -1,8 +1,7 @@
 # ts-vue-sample
 
-Mock server used https://jsonplaceholder.typicode.com/
 
-**This is a simple Blog (with CRUD Operation) to showcase the usage of:**
+This is a simple blog application (with CRUD operation) that showcases the usage of the following technologies:
 
 - Vue
 - Vuex and Modules
@@ -10,6 +9,7 @@ Mock server used https://jsonplaceholder.typicode.com/
 - Typescript (Class based API)
 - Axios
 - Code splitting/ Lazy loading
+- Mock server used https://jsonplaceholder.typicode.com/
 
 ### Styling
 
@@ -20,43 +20,48 @@ Mock server used https://jsonplaceholder.typicode.com/
 
 ### Vuex
 
-Using Vuex to store some common data and accessing them using Helpers in components. Using modular approach by creating specific modules to store and access data.
+Vuex is used to store common data and accessed using helpers in components. It also follows a modular approach by creating specific modules to store and access data.
 
 ### Typing
 
-Class based API approach is used here. Using `vue-property-decorator` to decorate modules in Component files.
-Using `vuex-module-decorators` to decorate Vuex modules and `vuex-class` library to access the Vuex properties such as `state`, `actions`, `getters` etc in components.
+This application follows a class-based API approach. The `vue-property-decorator` is used to decorate modules in component files. The `vuex-module-decorators` is used to decorate Vuex modules, and the `vuex-class` library is used to access Vuex properties such as `state`, `actions`, `getters` etc. in components.
 
 ## Project setup
-
+To install the project dependencies, run:
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
+yarn install
 ```
 
-### Compiles and minifies for production
-
+### Development
+To compile and hot-reload for development, run:
 ```
-npm run build
-```
-
-### Run your unit tests
-
-```
-npm run test:unit
+yarn serve
 ```
 
-### Lints and fixes files
-
+### Production
+To compile and minify for production, run:
 ```
-npm run lint
+yarn build
 ```
 
-### Customize configuration
+### Deploy:
+To deploy the application, run:
+```
+yarn deploy
+```
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Tests
+To run unit tests, run:
+```
+yarn test:unit
+```
+
+### Linting
+To lint and fix files, run:
+```
+yarn lint
+```
+
+### Customization
+
+For more information on customization, see [Configuration Reference](https://cli.vuejs.org/config/).
