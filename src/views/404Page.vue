@@ -3,6 +3,7 @@
     Page not found
   </div>
 </template>
+
 <style lang="scss" scoped>
 .not-found {
   font-size: 3rem;
@@ -13,3 +14,12 @@
   height: 80vh;
 }
 </style>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'NotFoundPage'
+  // ...
+})
+</script>
