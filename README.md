@@ -1,5 +1,5 @@
-# ts-vue-sample
-
+# Vue-typescript-example
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Raouf25_Vue-typescript-example&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Raouf25_Vue-typescript-example)
 
 This is a simple blog application (with CRUD operation) that showcases the usage of the following technologies:
 
