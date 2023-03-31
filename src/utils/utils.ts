@@ -11,7 +11,7 @@ function notify(data: NotifyObj) {
     message: data.message,
     type: data.type,
     offset: 100,
-    duration: 5000
+    duration: 5000,
   })
 }
 

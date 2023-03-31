@@ -38,7 +38,7 @@ export default class Article extends Vue {
   }
 
   public getArticle(id: number): void {
-    this.getPost(id).then(data => {
+    this.getPost(id).then((data) => {
       this.article = data
     })
   }

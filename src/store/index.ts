@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   modules: {
     globalValues,
-    posts
-  }
+    posts,
+  },
 })
 export default store

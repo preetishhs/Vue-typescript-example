@@ -1,7 +1,5 @@
 <template>
-  <div class="not-found">
-    Page not found
-  </div>
+  <div class="not-found">Page not found</div>
 </template>
 
 <style lang="scss" scoped>
@@ -19,7 +17,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'NotFoundPage'
+  name: 'NotFoundPage',
   // ...
 })
 </script>

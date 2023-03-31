@@ -8,50 +8,50 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
   },
   {
     path: '/article/:id',
     name: 'article',
     component: () =>
-      import(/* webpackChunkName: "ModifyBlog" */ '@/views/Article.vue')
+      import(/* webpackChunkName: "ModifyBlog" */ '@/views/Article.vue'),
   },
   {
     path: '/modify',
     name: 'modify',
     component: () =>
-      import(/* webpackChunkName: "ModifyBlog" */ '@/views/ModifyBlog.vue')
+      import(/* webpackChunkName: "ModifyBlog" */ '@/views/ModifyBlog.vue'),
   },
   {
     path: '/create',
     name: 'create',
     component: () =>
-      import(/* webpackChunkName: "CreateItem" */ '@/views/Edit.vue')
+      import(/* webpackChunkName: "CreateItem" */ '@/views/Edit.vue'),
   },
   {
     path: '/edit/:id',
     name: 'edit',
     component: () =>
-      import(/* webpackChunkName: "EditItem" */ '@/views/Edit.vue')
+      import(/* webpackChunkName: "EditItem" */ '@/views/Edit.vue'),
   },
   {
     path: '/about',
     name: 'about',
     component: () =>
-      import(/* webpackChunkName: "about" */ '@/views/AboutPage.vue')
+      import(/* webpackChunkName: "about" */ '@/views/AboutPage.vue'),
   },
   {
     path: '*',
     name: 'notFound',
     component: () =>
-      import(/* webpackChunkName: "about" */ '@/views/404Page.vue')
-  }
+      import(/* webpackChunkName: "about" */ '@/views/404Page.vue'),
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 })
 
 export default router

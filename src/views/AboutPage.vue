@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Contenu du About page
-  </div>
+  <div>Contenu du About page</div>
 </template>
 
 <script>

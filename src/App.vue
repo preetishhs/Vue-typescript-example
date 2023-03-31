@@ -11,8 +11,8 @@ import { namespace } from 'vuex-class'
 const globalValues = namespace('globalValues')
 @Component({
   components: {
-    Navbar
-  }
+    Navbar,
+  },
 })
 export default class App extends Vue {
   @globalValues.State

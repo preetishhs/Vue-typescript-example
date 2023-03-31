@@ -10,7 +10,7 @@ class Posts extends VuexModule {
   public post: Post = {
     title: '',
     id: 0,
-    body: ''
+    body: '',
   }
 
   @Mutation
@@ -25,7 +25,7 @@ class Posts extends VuexModule {
     } else {
       return api
         .get('/posts')
-        .then(response => {
+        .then((response) => {
           this.context.commit('saveList', response.data)
           return true
         })
@@ -33,7 +33,7 @@ class Posts extends VuexModule {
           notify({
             title: 'Error',
             type: 'error',
-            message: 'Could not fetch the list'
+            message: 'Could not fetch the list',
           })
           return false
         })
@@ -47,7 +47,7 @@ class Posts extends VuexModule {
   @Action
   public async getPost(id: number): Promise<Post | boolean> {
     if (this.list.length !== 0) {
-      const fetched = this.list.filter(item => {
+      const fetched = this.list.filter((item) => {
         return item.id === id
       })
 
@@ -59,7 +59,7 @@ class Posts extends VuexModule {
     } else {
       return api
         .get(`/posts/${id}`)
-        .then(response => {
+        .then((response) => {
           this.context.commit('save', response.data)
           return response.data
         })
@@ -67,7 +67,7 @@ class Posts extends VuexModule {
           notify({
             title: 'Error',
             type: 'error',
-            message: 'Could not fetch Article'
+            message: 'Could not fetch Article',
           })
           return false
         })
@@ -76,22 +76,22 @@ class Posts extends VuexModule {
 
   @Mutation
   public edit(data: Post): void {
-    const index = this.list.findIndex(item => item.id === data.id);
+    const index = this.list.findIndex((item) => item.id === data.id)
     if (index === -1) {
-      this.list = [...this.list, data];
+      this.list = [...this.list, data]
     }
   }
   @Action
   public async editPost(data: Post): Promise<boolean> {
     return api
       .put(`/posts/${data.id}`, {
-        data
+        data,
       })
       .then(() => {
         notify({
           title: 'Success',
           type: 'success',
-          message: 'Successfully edited'
+          message: 'Successfully edited',
         })
         this.context.commit('edit', data)
         return true
@@ -100,7 +100,7 @@ class Posts extends VuexModule {
         notify({
           title: 'Error',
           type: 'error',
-          message: 'Could not edit'
+          message: 'Could not edit',
         })
         return false
       })
@@ -113,13 +113,13 @@ class Posts extends VuexModule {
   public async createPost(data: Post): Promise<boolean> {
     return api
       .post('/posts', {
-        data
+        data,
       })
-      .then(response => {
+      .then((response) => {
         notify({
           title: 'Success',
           type: 'success',
-          message: 'Successfully created an Article'
+          message: 'Successfully created an Article',
         })
         response.data.data.id = response.data.id
         this.context.commit('create', response.data.data)
@@ -129,7 +129,7 @@ class Posts extends VuexModule {
         notify({
           title: 'Error',
           type: 'error',
-          message: 'Could not create'
+          message: 'Could not create',
         })
         return false
       })
@@ -137,7 +137,7 @@ class Posts extends VuexModule {
 
   @Mutation
   public delete(id: number): void {
-    this.list = this.list.filter(item => {
+    this.list = this.list.filter((item) => {
       return item.id !== id
     })
   }
@@ -149,7 +149,7 @@ class Posts extends VuexModule {
         notify({
           title: 'Success',
           type: 'success',
-          message: 'Successfully deleted'
+          message: 'Successfully deleted',
         })
         this.context.commit('delete', id)
       })
@@ -157,7 +157,7 @@ class Posts extends VuexModule {
         notify({
           title: 'Error',
           type: 'error',
-          message: 'Could not delete'
+          message: 'Could not delete',
         })
       })
   }

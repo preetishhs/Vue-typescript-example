@@ -3,20 +3,20 @@ import store from '@/store'
 
 const config = {
   baseURL: 'https://jsonplaceholder.typicode.com',
-  headers: { Accept: 'application/json' }
+  headers: { Accept: 'application/json' },
 }
 
 const call = axios.create(config)
-call.interceptors.request.use(request => {
+call.interceptors.request.use((request) => {
   store.dispatch('globalValues/setLoading', true)
   return request
 })
 call.interceptors.response.use(
-  response => {
+  (response) => {
     store.dispatch('globalValues/setLoading', false)
     return response
   },
-  error => {
+  (error) => {
     store.dispatch('globalValues/setLoading', false)
     return error
   }

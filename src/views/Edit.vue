@@ -31,7 +31,7 @@ export default class ModifyItem extends Vue {
   public formData: Post = {
     title: '',
     id: 0,
-    body: ''
+    body: '',
   }
 
   @posts.Action
@@ -48,7 +48,7 @@ export default class ModifyItem extends Vue {
     } else {
       this.isNew = false
       this.pageTitle = 'Modify Article'
-      this.getPost(this.postId).then(data => {
+      this.getPost(this.postId).then((data) => {
         this.formData = data
       })
     }
