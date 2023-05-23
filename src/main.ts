@@ -12,6 +12,8 @@ Vue.use(ElementUI)
 import '@/assets/styles/app.scss'
 Vue.config.productionTip = false
 
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+
 new Vue({
   router,
   store,

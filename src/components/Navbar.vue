@@ -9,12 +9,15 @@
       <router-link :to="{ name: 'home' }" tag="div" class="nav-item">
         Home
       </router-link>
-      <router-link :to="{ name: 'modify' }" tag="div" class="nav-item">
+      <!--router-link :to="{ name: 'modify' }" tag="div" class="nav-item">
         Edit / Delete
       </router-link>
       <router-link :to="{ name: 'create' }" tag="div" class="nav-item">
         Create new
       </router-link>
+      <router-link :to="{ name: 'annotation' }" tag="div" class="nav-item">
+        Annotation
+      </router-link-->
     </div>
   </div>
 </template>

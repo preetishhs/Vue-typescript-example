@@ -5,10 +5,16 @@ import Home from '@/views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
+  /* {
     path: '/',
     name: 'home',
     component: Home,
+  },*/
+  {
+    path: '/',
+    name: 'home',
+    component: () =>
+      import(/* webpackChunkName: "CreateItem" */ '@/views/DrawPoint.vue'),
   },
   {
     path: '/article/:id',
